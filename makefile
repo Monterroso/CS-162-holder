@@ -1,3 +1,5 @@
-all:
-	g++ wc.c 
+wc: wc.o
+
+wc.o: wc.c
+	g++ -c wc.c
 
