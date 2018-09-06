@@ -4,6 +4,8 @@
 /* A staticly allocated variable */
 int foo;
 
+int hello;
+
 /* A recursive function */
 int recur(int i) {
     /* A stack allocated variable within a recursive function */

@@ -12,3 +12,7 @@ map.o: map.c
 wc: wc.o
 wc.o: wc.c
 	g++ -c wc.c
+
+clean:
+	rm map.o wc.o main.o
+	
