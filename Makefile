@@ -1,14 +1,14 @@
-wc: wc.o
+all: main map wc
 
 main: main.o
-
-map: map.o
-
-map.o: map.c
-	g++ -c map.c
-
 main.o: main.c
 	g++ -c main.c
 
+
+map: map.o
+map.o: map.c
+	g++ -c map.c
+
+wc: wc.o
 wc.o: wc.c
 	g++ -c wc.c
