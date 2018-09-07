@@ -47,33 +47,47 @@ int main(int argc, char *argv[]) {
 	//we have a flag to see whether we start counting a word
 	int word = 0;
 
+	int prevc;
+
+	//Okay so we have to check the newline
+	//so lets preget the end of file. 
+
 	if (file) {
+
+		//so we shall do while. 
+
+		int prevc = -1;
+
 	    while ((c = getc(file)) != EOF) {
-		//putchar(c);
-		
-		bytecount++;
+			//putchar(c);
+			
+			bytecount++;
 
-		if (c == 10 || c == 13){
-		    linecount++;
-		}
+			if (c == 10){
+			    linecount++;
+			}
 
-		if (c == 10 || c == 32 || c == 9 || c == 13) {
-		    //now we check if wordprog is 0 or 1
-			if (word == 1){
-			    word = 0;
-			}    
-		}
-		else {
-		    //this means we should start counting!
-		    //A non space was found, when it was before
-		    if (word == 0){
-			word = 1;
-			wordcount++;
-		    }
-		}
+			if (c != 10 || prevc != 13) {
+
+				if (c == 10 || c == 32 || c == 9) {
+				    //now we check if wordprog is 0 or 1
+					if (word == 1){
+				    	word = 0;
+					}    
+				}
+				else {
+				    //this means we should start counting!
+				    //A non space was found, when it was before
+				    if (word == 0){
+						word = 1;
+						wordcount++;
+				    }
+				}
+			}
+			prevc = c;
 	    }
 	    fclose(file);
-        }
+    }
 
     if (argc > 2){
 	printf("There are too many arguments, you have %d ",argc);
