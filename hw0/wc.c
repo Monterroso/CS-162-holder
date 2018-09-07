@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
 			    linecount++;
 			}
 
-			if (c != 10 || prevc != 13) {
+			if (!(c == 10 && prevc == 13)) {
 
 				if (c == 10 || c == 32 || c == 9) {
 				    //now we check if wordprog is 0 or 1
@@ -95,7 +95,7 @@ int main(int argc, char *argv[]) {
     
     }
     
-    printf("  %d  %d %d %s\n",linecount,wordcount,bytecount,filename);
+    printf("\r%d%d  %d %s\r\n",linecount,wordcount,bytecount,filename);
 
     return 0;
 }

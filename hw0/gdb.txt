@@ -1,0 +1,11 @@
+(char **) 0x7fffffffe778 this is the pointer to a pointer. 
+
+0x7fffffffea03 is the pointer to the 0 element
+
+0x40069d is the address of main
+
+The stack shows the open file in the stack, along with all of the variables we have stored. 
+
+The frame holds the locals, and args, our registers, and the previous frame's stack pointer. 
+
+r9 contains our pointer to our array, which the program is iterating through for it's running. 

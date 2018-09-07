@@ -1,0 +1,8 @@
+File format is elf64-x86-64
+Architexture is i386:x86-64
+
+Found sections like .text, .init, .plt
+
+Main is in .text, started at 40069d, which is indeed the same. 
+
+I just see pointers which could be it, which makes sense since the stack and the heap are only created at runtime, and there is nothing within them before the program runs.  

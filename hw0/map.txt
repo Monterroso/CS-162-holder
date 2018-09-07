@@ -1,0 +1,29 @@
+main is in .tesxt
+
+_main  @ 0x4005c2
+recur @ 0x40057d
+_main stack: 0x7ffc1dcac21c
+static data: 0x601048
+Heap: malloc 1: 0xe9d010
+Heap: malloc 2: 0xe9d080
+recur call 3: stack@ 0x7ffc1dcac1ec
+recur call 2: stack@ 0x7ffc1dcac1bc
+recur call 1: stack@ 0x7ffc1dcac18c
+recur call 0: stack@ 0x7ffc1dcac15c
+
+static is in the section <stuff>
+
+Address of main is in the section main.
+
+Recurr is in the <_z5recuri> section
+
+.comment holds the location of comments in the code.
+The stack grows down, for each call, it is 3*16
+
+(_dynamic) is where variables addresses are computed, as it has a lot of add calls. 
+
+(Frame_end) contains the information for the frame. 
+
+(main) contains the information from function main . 
+
+Heap grows up, is at 0xe9d010
