@@ -57,7 +57,7 @@ int main(int argc, char *argv[]) {
 		    linecount++;
 		}
 
-		if (c == 10 || c == 32 || c == 9 || c = 13) {
+		if (c == 10 || c == 32 || c == 9 || c == 13) {
 		    //now we check if wordprog is 0 or 1
 			if (word == 1){
 			    word = 0;
