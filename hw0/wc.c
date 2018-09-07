@@ -47,7 +47,6 @@ int main(int argc, char *argv[]) {
 	//we have a flag to see whether we start counting a word
 	int word = 0;
 
-	int prevc;
 
 	//Okay so we have to check the newline
 	//so lets preget the end of file. 
@@ -89,7 +88,7 @@ int main(int argc, char *argv[]) {
     
     }
     
-    printf("\r%d%d  %d %s\r\n",linecount,wordcount,bytecount,filename);
+    printf("%d  %d  %d %s\n",linecount,wordcount,bytecount,filename);
 
     return 0;
 }
