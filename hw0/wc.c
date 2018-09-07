@@ -56,8 +56,6 @@ int main(int argc, char *argv[]) {
 
 		//so we shall do while. 
 
-		int prevc = -1;
-
 	    while ((c = getc(file)) != EOF) {
 			//putchar(c);
 			
@@ -67,24 +65,20 @@ int main(int argc, char *argv[]) {
 			    linecount++;
 			}
 
-			if (!(c == 10 && prevc == 13)) {
-
-				if (c == 10 || c == 32 || c == 9) {
-				    //now we check if wordprog is 0 or 1
-					if (word == 1){
-				    	word = 0;
-					}    
-				}
-				else {
-				    //this means we should start counting!
-				    //A non space was found, when it was before
-				    if (word == 0){
-						word = 1;
-						wordcount++;
-				    }
-				}
+			if (c == 10 || c == 32 || c == 9) {
+			    //now we check if wordprog is 0 or 1
+				if (word == 1){
+			    	word = 0;
+				}    
 			}
-			prevc = c;
+			else {
+			    //this means we should start counting!
+			    //A non space was found, when it was before
+			    if (word == 0){
+					word = 1;
+					wordcount++;
+			    }
+			}
 	    }
 	    fclose(file);
     }
